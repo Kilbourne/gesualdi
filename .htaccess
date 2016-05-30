@@ -1,7 +1,0 @@
-
-# Turn mod_rewrite on
-RewriteEngine On
-
-
-RewriteCond %{REQUEST_URI} !/nafrhythm/web/
-RewriteRule (.*) /nafrhythm/web/$1 [L]
