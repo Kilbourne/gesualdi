@@ -22,10 +22,12 @@
          FastClick.attach(document.body);
         var lightbox = lity();
         $(document).on('click', '.credits', lightbox); 
-    
+        //$('body>.page-wrapper').height(function(i,h){
+        //  return $('#responsive-menu').height();
+        //})
         (function Menu(){
           var isOpen=false;
-          $(document).on('click',function(e){ if (e.which != 2 && !$(e.target).closest('#responsive-menu, #click-menu').length) { closeRM() }});
+          //$(document).on('click',function(e){ if (e.which != 2 && !$(e.target).closest('#responsive-menu, #click-menu').length) { closeRM() }});
           $(document).on('click', '#click-menu', function() { !isOpen ? openRM() : closeRM() });
           if (window.matchMedia("(min-width: 800px)").matches && isOpen) {
             closeRM();
@@ -41,18 +43,18 @@
           }
 
           function closeRM() {
-              $('#responsive-menu').animate({ left: -$('#responsive-menu').width() }, 500, 'linear', function() {
+              //$('#responsive-menu').animate({ left: -$('#responsive-menu').width() }, 500, 'linear', function() {
                   //$('#responsive-menu').css('display', 'none');
                   $('#responsive-menu').removeClass('RMOpened');
                   $('#click-menu').removeClass('click-menu-active');
                   isOpen = false
-              })
+              //})
           }
           $(window).resize(function() {
               $('#responsive-menu').stop(true, true);
               //$('#responsive-menu').css('height', $(document).height());
               if ($(window).width() > 800) {
-                  if ($('#responsive-menu').css('left') != -$('#responsive-menu').width()) { closeRM() }
+                  //if ($('#responsive-menu').css('left') != -$('#responsive-menu').width()) { closeRM() }
               }
           });
         }())
@@ -73,6 +75,11 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+      }
+    },
+    'page_template_band':{
+      init:function(){
+        $('.discs-list').slick({slidesToShow:3});
       }
     },
     'discografia':{

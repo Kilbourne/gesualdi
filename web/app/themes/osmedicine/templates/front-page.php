@@ -15,8 +15,10 @@
   		}
   		echo "</ul>
 				</div>";
-  	}
-    echo wp_get_attachment_image( get_field('full-width_background_image','option'), "large");
+  	}else{
+       $image=get_field('full-width_background_image', 'option');
+       echo wp_get_attachment_image( $image, 'full');
+    }
    ?>
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>

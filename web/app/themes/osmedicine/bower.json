@@ -28,13 +28,14 @@
     "inuit-spacing": "latest",
     "inuit-spacing-responsive": "latest",
     "inuit-widths": "latest",
-    "inuit-widths-responsive": "latest",    
+    "inuit-widths-responsive": "latest",
     "jquery": "~1.11.3",
     "fastclick": "~1.0.6",
     "imagesloaded": "~4.1.0",
     "unslider": "~2.0.3",
     "jquery.event.swipe": "~0.5.4",
-    "lity": "~1.6.4"
+    "lity": "~1.6.4",
+    "slick-carousel": "~1.6.0"
   },
   "overrides": {
     "unslider": {
@@ -43,12 +44,12 @@
         "dist/css/unslider.css",
         "dist/css/unslider-dots.css"
       ]
-    }
-    ,"lity":{
-        "main":[
+    },
+    "lity": {
+      "main": [
         "dist/lity.min.js",
         "dist/lity.min.css"
-        ]
+      ]
     }
   }
 }
